@@ -17,6 +17,16 @@ services:
     networks:
       - microservices_network
 
+  payment_service:
+    build:
+      context: ./payment_service
+    ports:
+      - "50053:50053"
+    networks:
+      - microservices_network
+    volumes:
+      - ./protos:/protos
+
 networks:
   microservices_network:
     driver: bridge
