@@ -7,8 +7,8 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Генерация файлов из .proto
-COPY user_service.proto user_service.proto
-RUN python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. user_service.proto
+COPY ./protos /protos
+RUN python -m grpc_tools.protoc -I/protos --python_out=. --grpc_python_out=. /protos/user_service.proto
 
 # Копируем код сервиса
 COPY user_service.py user_service.py
