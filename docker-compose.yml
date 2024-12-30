@@ -1,23 +1,21 @@
 services:
   user_service:
     build:
-      context: ./user_service
+      context: .
+      dockerfile: ./user_service/Dockerfile
     ports:
       - "50051:50051"
     networks:
       - microservices_network
-    volumes:
-      - ./protos:/protos
 
   order_service:
     build:
-      context: ./order_service
+      context: .
+      dockerfile: ./order_service/Dockerfile
     ports:
       - "50052:50052"
     networks:
       - microservices_network
-    volumes:
-      - ./protos:/protos
 
 networks:
   microservices_network:
