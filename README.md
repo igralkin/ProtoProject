@@ -73,9 +73,10 @@ project_root/
 - Docker Compose >= 1.29
 
 ## Установка grpcurl
-
-chmod +x start.sh
-./start.sh
+   ```bash
+   chmod +x start.sh
+   ./start.sh
+   ```
 
 ## Взаимодействие микросервисов
 
