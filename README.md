@@ -52,7 +52,7 @@ project_root/
 2. **Клонируйте репозиторий**
    ```bash
    git clone https://github.com/igralkin/ProtoProject.git
-   cd microservices-platform
+   cd ProtoProject
    ```
 
 3. **Соберите и запустите контейнеры**
